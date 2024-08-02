@@ -1,4 +1,4 @@
-console.log("ASIF KHAN");
+// console.log("ASIF KHAN");
 /*JavaScript is First-class Function based programming language */
 
 /* Assigning a function to a variable */
@@ -30,3 +30,15 @@ function func2(func3, name) {
 // func2(func1, "func2");
 
 /* This also explains how we are treating a function as a value */
+
+function hello() {
+  console.log("Hello");
+}
+
+function sayHello() {
+  console.log(hello());
+  
+  return hello;
+}
+
+console.log(sayHello());
