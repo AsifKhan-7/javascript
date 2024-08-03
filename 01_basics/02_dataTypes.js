@@ -8,7 +8,11 @@
 
 // alert("This is JS learning curve"); I am nodejs not browser
 
-console.log(10 + 20); //code readability should be high
+console.log(10 
+  + 
+  20); //code readability should be high
+
+  
 console.log("Asif");
 
 let name = "Asif Khan";
