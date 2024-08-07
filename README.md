@@ -9,3 +9,9 @@ language are treated like any other variable. For example, in such a language, a
 can be passed as an argument to other functions, can be returned by another function and 
 
 can be assigned as a value to a variable.
+
+### Epoch
+
+Epoch ek fixed point hai jo date aur time calculations ko start karne ke liye use kiya jaata 
+
+hai. Yeh ek reference time hota hai jisse date aur time ko measure kiya jata hai.
