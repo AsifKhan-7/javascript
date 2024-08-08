@@ -31,3 +31,5 @@ A static method returns current time in milliseconds from January 1, 1970
 ##### Purpose 
 
 This method is primarily used for timestamps or performance measurements. 
+
+# Negative indexes ko use karke  array ke end se counting start karte hain
