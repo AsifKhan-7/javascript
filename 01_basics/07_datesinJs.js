@@ -69,7 +69,7 @@ let myTimeStamp = Date.now();
 
 // console.log(createdDate.getTime()); //getTime method returns milliseconds since January 1, 1970 till now
 
-// console.log(Math.floor(Date.now() / 1000)); //converting the milliseconds into seconds
+// console.log(Math.floor(Date.now() / 1000)); //converting the milliseconds into seconds it does  for comparison between two dates
 
 let newDate = new Date();
 // console.log(newDate);
