@@ -86,5 +86,23 @@ let options = {
   second: "2-digit", // e.g., "09"
   timeZoneName: "short", // e.g., "EDT"
 };
-console.log(newDate.toLocaleString("en-US", options));
+// console.log(newDate.toLocaleString("en-US", options));
 
+//Example of set method
+
+let date = new Date();
+date.setFullYear(2025); // Set year to 2025
+date.setFullYear(2025, 11); // Set year to 2025 and month to December (0-indexed)
+date.setFullYear(2025, 11, 25); // Set year to 2025, month to December, and day to 25
+
+console.log(date);
+
+let date1 = new Date();
+console.log(`Current Date and Time: ${date1.toString()}`);
+// Set a new date
+date1.setFullYear(2024, 11, 25);
+date1.setHours(10, 30, 0);
+
+console.log(`Updated Date and Time: ${date1.toLocaleString("en-US", options)}`);
+
+/* set methods modify the existing date and it is used for mostly update event , timers and schedules etc. */
