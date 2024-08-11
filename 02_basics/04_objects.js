@@ -30,7 +30,7 @@ const obj3 = { 5: "e", 6: "f" };
 // const obj = Object.assign({},obj1,obj2,obj3) //{} optional param, target object. this method returns target object
 
 const obj = { ...obj1, ...obj2, ...obj3 }; //recommended
-console.log(obj);
+// console.log(obj);
 
 const users = [
   {
@@ -51,9 +51,47 @@ const users = [
   },
 ];
 
-console.log(user);
-console.log(Object.keys(user));
-console.log(Object.values(user));
-console.log(Object.entries(user));
+// console.log(user);
+// console.log(Object.keys(user));
+// console.log(Object.values(user));
+// console.log(Object.entries(user));
 
-console.log(user.hasOwnProperty("name"));
+// console.log(user.hasOwnProperty("name"));
+
+const obje = {
+  name: "Asif",
+  greet: function () {
+    setTimeout(() => {
+      console.log(this.name); // Arrow function ka `this`, `greet` method ka `this` hi hota hai
+    }, 1000);
+  },
+};
+// obje.greet(); // Yeh "Asif" show karega
+
+const course = {
+  courseName: "JavaScript",
+  coursePrice: 1199,
+  courseInstructr: "Asif",
+};
+
+// course.courseInstructr
+
+const { courseInstructr: instructor, courseName, coursePrice: price } = course; //de-structure
+
+console.log(instructor, courseName, price);
+
+
+// {
+//  "courseName":"JavaScript",
+//  "coursePrice":"free",
+//  "instructor":"Asif"
+
+// } This is JSON
+
+// [
+//   {},
+//   {},
+//   {}
+// ]
+
+
