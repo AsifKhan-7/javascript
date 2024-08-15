@@ -23,6 +23,14 @@
 //   score++;
 // } while (score <= 10 );
 
+const numbers = [1, 2, 3, 4, 5];
+const moreNumbers = numbers.map((number) => number * 2); 
+console.log(moreNumbers)
 
+for (let i = 0; i < numbers.length; i++) {
+  moreNumbers.push(numbers[i] * 2);
+}
+
+console.log(moreNumbers);
 
 
