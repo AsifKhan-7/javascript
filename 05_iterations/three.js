@@ -1,5 +1,9 @@
 // for of
 
+// ["", "", ""];
+// [{}, {} ,{}]
+
+
 // const arr = [1, 2, 3, 4, 5];
 // const newArr = [];
 
@@ -30,10 +34,10 @@
 // myMap.set("IN", "Indai");
 // // console.log(myMap) // returns an object like {'key' => 'value'} stores unique key value pairs
 
-// for (const [key, value] of myMap) {
-//   console.log(key, " => ", value); //print key value together
+// for (const key of myMap) {
+//   // console.log(key, " => ", value); //print key value together
  
- 
+// //  console.log(key) // prints only keys 
 // }
 
 
@@ -41,16 +45,15 @@
 
 // for of loop on literal object
 
-const myObj = {
-  game1:"BGMI",
-  game2:"Asphlat", // it is not iterable
-}
+// const myObj = {
+//   game1:"BGMI",
+//   game2:"Asphlat", // it is not iterable
+// }
 
-for (const [key, value] of myObj) {
-  console.log(myObj[key, value]);
-}
-
-
+// for (const key in myObj) {
+//   console.log(myObj[key, value]);
+// }
+// for of loop does not work on object literal
 
 
 // const obj = {
@@ -59,7 +62,7 @@ for (const [key, value] of myObj) {
 //   c: 3
 // };
 
-// for (const [key, value] of Object.entries(obj)) {
+// for (const [key, value] of Object.entries(obj)) { this will work
 //   console.log(`${key}: ${value}`);
 // }
 
