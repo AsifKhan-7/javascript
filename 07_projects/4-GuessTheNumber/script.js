@@ -1,5 +1,6 @@
 let randomNumber = parseInt(Math.random() * 100 + 1);
 
+
 const submitBtn = document.querySelector("#subt");
 const userInput = document.querySelector("#guessField");
 const guessSlot = document.querySelector(".guesses");
@@ -34,11 +35,11 @@ function validateGuess(guessNum) {
   } else {
     prevGuess.push(guessNum);
     if (numGuess === 11) {
-      displayGuess(guessNum);
+      clearGuess(guessNum);
       displayMessage(`Game over. Random number was ${randomNumber}`);
       endGame();
     } else {
-      displayGuess(guessNum);
+      clearGuess(guessNum);
       checkGuess(guessNum);
     }
   }
@@ -55,7 +56,7 @@ function checkGuess(guessNum) {
   }
 }
 
-function displayGuess(guessNum) {
+function clearGuess(guessNum) {
   userInput.value = "";
   guessSlot.innerHTML += `${guessNum}, `;
   numGuess++;
