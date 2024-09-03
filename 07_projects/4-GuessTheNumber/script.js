@@ -1,6 +1,5 @@
 let randomNumber = parseInt(Math.random() * 100 + 1);
 
-
 const submitBtn = document.querySelector("#subt");
 const userInput = document.querySelector("#guessField");
 const guessSlot = document.querySelector(".guesses");
@@ -11,7 +10,8 @@ const startOver = document.querySelector(".resultParas");
 const p = document.createElement("p");
 
 let prevGuess = [];
-let numGuess = 1;
+let numGuess = 0;
+let maxGuess = 10;
 
 let playGame = true;
 
@@ -26,15 +26,11 @@ if (playGame) {
 }
 
 function validateGuess(guessNum) {
-  if (isNaN(guessNum)) {
-    alert("Please enter a valid number");
-  } else if (guessNum < 1) {
-    alert("Please enter a valid number");
-  } else if (guessNum > 100) {
-    alert("Please enter the number less than or equal to 100");
+  if (isNaN(guessNum) || guessNum < 1 || guessNum > 100) {
+    alert("Please enter a valid number greator then 0 to 100");
   } else {
     prevGuess.push(guessNum);
-    if (numGuess === 11) {
+    if (numGuess >= maxGuess - 1) {
       clearGuess(guessNum);
       displayMessage(`Game over. Random number was ${randomNumber}`);
       endGame();
@@ -60,7 +56,7 @@ function clearGuess(guessNum) {
   userInput.value = "";
   guessSlot.innerHTML += `${guessNum}, `;
   numGuess++;
-  remaining.innerHTML = `${11 - numGuess}`;
+  remaining.innerHTML = `${maxGuess - numGuess}`;
 }
 
 function displayMessage(message) {
@@ -72,6 +68,7 @@ function endGame() {
   userInput.setAttribute("disabled", "");
   p.classList.add("button");
   p.innerHTML = `<h2 id = "new-game">Start new game</h2>`;
+  p.classList.add("start")
   startOver.prepend(p);
   playGame = false;
   newGame();
@@ -82,9 +79,9 @@ function newGame() {
   newGameBtn.addEventListener("click", () => {
     randomNumber = parseInt(Math.random() * 100 + 1);
     prevGuess = [];
-    numGuess = 1;
+    numGuess = 0;
     guessSlot.innerHTML = "";
-    remaining.innerHTML = `${11 - numGuess}`;
+    remaining.innerHTML = `${maxGuess - numGuess}`;
     userInput.removeAttribute("disabled");
     startOver.removeChild(p);
     playGame = true;
