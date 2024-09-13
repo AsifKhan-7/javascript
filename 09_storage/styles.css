@@ -1,0 +1,53 @@
+/* styles.css */
+
+/* Overall Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #424242;
+}
+
+/* Header Styling */
+h1 {
+  color: #d9e1e8;
+  /* color: #333; */
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+  background-color: #4CAF50; /* Green background */
+  border: none; /* Remove border */
+  outline: none;
+  color: white; /* White text */
+  padding: 10px 20px; /* Some padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make the buttons inline-block */
+  font-size: 16px; /* Larger font size */
+  margin: 10px; /* Margin around buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+/* Result Paragraph Styling */
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  /* color: #555; */
+  color: #d9e1e8;
+
+}
