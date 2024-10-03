@@ -1,4 +1,10 @@
 {
+  "window.zoomLevel": 0.7,
+  "liveServer.settings.donotVerifyTags": true,
+  "screencastMode.verticalOffset": 1,
+  "workbench.tree.indent": 15,
+  "workbench.tree.renderIndentGuides": "always",
+
   "editor.mouseWheelZoom": true,
   "editor.linkedEditing": true,
   "terminal.integrated.mouseWheelZoom": true,
@@ -33,6 +39,9 @@
   "livePreview.hostIP": "192.168.29.212",
 
   "workbench.colorCustomizations": {
+    
+    "tree.indentGuidesStroke": "#E84545",
+
     "activityBar.background": "#1E2D3D",
     "activityBar.foreground": "#BFC7D5",
     "activityBarBadge.background": "#E84545",
@@ -183,4 +192,5 @@
       }
     ]
   }
+
 }
