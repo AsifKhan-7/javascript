@@ -21,8 +21,8 @@ const jsUser = {
 // console.log(jsUser.email); //accessing the object [1. dot notation 2. bracket notation]
 
 // console.log(jsUser["email"]); //because keys treated as strings behind the scene
-// console.log(jsUser["full name"]);
-// console.log(jsUser[mySym]);
+console.log(jsUser["full name"]);
+console.log(jsUser[mySym]);
 
 // jsUser.email = "Coder@microsoft.com";
 // console.log(jsUser.email);
@@ -35,13 +35,9 @@ jsUser.greeting = function () {
   console.log("Hello JS user");
 };
 
-
 jsUser.greetingOne = function () {
   console.log(`Hello JS user, ${this.email}`);
 };
 
 console.log(jsUser.greeting());
 console.log(jsUser.greetingOne());
-
-
-
