@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>json Demo</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+      let text =
+        '{ "employees" : [' +
+        '{ "firstName":"John" , "lastName":"Doe" },' +
+        '{ "firstName":"Anna" , "lastName":"Smith" },' +
+        '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+      const obj = JSON.parse(text);
+
+      document.getElementById("demo").innerHTML =
+        obj.employees[0].firstName + " " + obj.employees[0].lastName;
+
+      document.getElementById("demo1").innerHTML =
+        obj.employees[1].firstName + " " + obj.employees[1].lastName;
+
+      document.getElementById("demo2").innerHTML =
+        obj.employees[2].firstName + " " + obj.employees[2].lastName;
+
+      // localStorage.setItem("Name", "Asif");
+      // localStorage.setItem("Role", "Software Developer");
+
+      // console.log(localStorage.getItem("Role"));
+
+      // const occasion = {
+      //   type: "conference",
+      //   name: "Tech Summit 2024",
+      //   date: "2024-11-15",
+      //   location: "San Francisco",
+      // };
+
+      // //data store in localstorage
+      // const occasionObj = JSON.stringify(occasion);
+      // localStorage.setItem("occasion", occasionObj);
+
+      // //data retrieve from localstorage
+      // const retrieveOccasionObj = localStorage.getItem("occasion");
+      // const receivedObj = JSON.parse(retrieveOccasionObj);
+      // console.log(receivedObj);
+
+      localStorage.removeItem("Role");
+
+      localStorage.clear();
+    </script>
+  </body>
+</html>
