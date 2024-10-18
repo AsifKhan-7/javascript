@@ -40,11 +40,7 @@ for (let category of categories.values()) {
 let events = new Set(["event1", "event2", "event3"]);
 
 for (let event of events.keys()) {
-  console.log(event);// identical to values() method
+  console.log(event); // identical to values() method
 }
 
 // In real life, JavaScript Set methods and operations are used in various practical scenarios to handle collections of unique items.
-
-
-
-
