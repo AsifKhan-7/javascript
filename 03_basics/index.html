@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise-Advance function</title>
+    <style>
+      .my-btn {
+        border: none;
+        background-color: crimson;
+        color: #fff;
+        border-radius: 0.45rem;
+        padding: 0.9rem;
+        font-size: 1rem;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .js-double-size {
+        padding: 2rem;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- problem-3 -->
+    <button class="my-btn">click me!</button>
+
+    <script>
+      //problem-4
+      let button = document.querySelector(".my-btn");
+      button.addEventListener("click", (event) => {
+        setTimeout(doubleTheSize, 1000);
+      });
+
+      function doubleTheSize() {
+        let button = document.querySelector(".my-btn");
+        button.classList.add("js-double-size");
+      }
+    </script>
+  </body>
+</html>
