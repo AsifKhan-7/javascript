@@ -1,4 +1,4 @@
-let arr = [8, 5, 10, 4];
+let arr = [88, 51, 1023, 445];
 
 console.log("===Bubble Sort===");
 
