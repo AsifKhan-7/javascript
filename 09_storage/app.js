@@ -23,3 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
     resultElement.textContent = `Session Storage value: ${value}`;
   });
 });
+
+let str = "asds";
+
+/* This is comment */
+
+function log() {
+  console.log("This is function");
+}
