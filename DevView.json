@@ -1,9 +1,11 @@
 {
-  "window.zoomLevel": 0.7,
-  "liveServer.settings.donotVerifyTags": true,
-  "screencastMode.verticalOffset": 1,
-  "workbench.tree.indent": 15,
-  "workbench.tree.renderIndentGuides": "always",
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "breadcrumbs.enabled": false,
+  "editor.minimap.enabled": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
 
   "editor.mouseWheelZoom": true,
   "editor.linkedEditing": true,
@@ -12,36 +14,33 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
-  "editor.fontSize": 18,
+  "editor.fontFamily": "JetBrains Mono, sans-serif",
+
+  "editor.fontSize": 16,
   "editor.fontLigatures": true,
 
   "editor.minimap.autohide": true,
   "editor.minimap.scale": 2,
   "editor.minimap.renderCharacters": false,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "workbench.iconTheme": "material-icon-theme",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.wordWrap": "on",
   "editor.tabSize": 2,
+
   "pieces.addSnippets": null,
   "redhat.telemetry.enabled": true,
   "editor.fontWeight": "400",
   "auto-rename-tag.activationOnLanguage": ["*"],
-  "terminal.integrated.fontSize": 17,
-  "files.autoSave": "afterDelay",
+  "terminal.integrated.fontSize": 14,
   "git.autofetch": true,
 
   "[snippets]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "livePreview.hostIP": "192.168.29.212",
 
   "workbench.colorCustomizations": {
-    
     "tree.indentGuidesStroke": "#E84545",
-
     "activityBar.background": "#1E2D3D",
     "activityBar.foreground": "#BFC7D5",
     "activityBarBadge.background": "#E84545",
@@ -191,6 +190,22 @@
         }
       }
     ]
-  }
+  },
 
+  "window.zoomLevel": 1,
+  "liveServer.settings.donotVerifyTags": true,
+  "screencastMode.verticalOffset": 1,
+
+  "workbench.tree.indent": 15,
+  "workbench.tree.renderIndentGuides": "always",
+  "livePreview.debugOnExternalPreview": true,
+  "livePreview.openPreviewTarget": "External Browser",
+  "editor.accessibilitySupport": "off",
+
+  "editor.insertSpaces": true,
+
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "html.hover.references": false
 }
