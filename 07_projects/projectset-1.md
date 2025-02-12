@@ -27,7 +27,7 @@ buttons.forEach((button) => {
       body.style.backgroundColor = e.target.id;
     }
   });
-}); 
+});
 
 // These conditions can be written in one line
 
@@ -65,6 +65,7 @@ buttons.forEach((button) => {
 });
 
 ```
+
 ### Project-2
 
 ```JavaScript
@@ -86,7 +87,7 @@ form.addEventListener("submit", (e) => {
   } else {
     const bmi = (weight/ (height * height) * 10000).toFixed(2);
     // result.innerHTML = `<span>BMI is ${bmi}</span>` ;
-  
+
     let message = ""
 
     if (bmi < 18.6) {
@@ -95,11 +96,11 @@ form.addEventListener("submit", (e) => {
       message = "It's normal"
     } else if (bmi >=24.9) {
       message = "It's overweight"
-    } 
+    }
     result.innerHTML = `<span>BMI is ${bmi}</span> <br> <span>${message}</span>`;
-  
-  }  
-  
+
+  }
+
 });
 
 ```
@@ -148,7 +149,7 @@ function updateClock() {
   let now = new Date();
   let nextSecond = new Date(now.getTime() + 1000 - now.getMilliseconds());
  ;
-  
+
   let timeout = nextSecond - now;
 
   setTimeout(updateClock, timeout);
@@ -230,7 +231,7 @@ function endGame() {
   userInput.setAttribute("disabled", "");
   p.classList.add("button");
   p.innerHTML = `<h2 id = "new-game">Start new game</h2>`;
-  p.classList.add("start")
+  p.classList.add("start");
   startOver.prepend(p);
   playGame = false;
   newGame();
@@ -249,7 +250,6 @@ function newGame() {
     playGame = true;
   });
 }
-
 ```
 
 ### Project -5
@@ -268,30 +268,28 @@ function startGame() {
 
   guessNumber = parseInt(prompt("Guess the number"));
 
-  while (true) 
-     if (guessNumber === "quit") {
+  while (true)
+    if (guessNumber === "quit") {
       alert(`User quit the game. Random number was ${randomNumber}.`);
       break;
-
     } else if (guessNumber == randomNumber) {
       gameResult();
       break;
-
     } else if (guessNumber < randomNumber) {
       guessNumber = prompt(
         `Hint: You guessed a bit small number. Please try again`
       );
-
     } else {
       guessNumber = prompt(
         `Hint: You guessed a bit large number. Please try again`
       );
     }
-  }
-
+}
 
 function gameResult() {
-  document.getElementById( "result").innerText = `You guessed it right. Guessed number is ${guessNumber}.`;
+  document.getElementById(
+    "result"
+  ).innerText = `You guessed it right. Guessed number is ${guessNumber}.`;
 }
 
 document.querySelector("#start").addEventListener("click", startGame);
@@ -377,7 +375,7 @@ displayTodo();
 function toggleTodo(idx) {
   data[idx].completed = !data[idx].completed
   localStorage.setItem("allTodo", JSON.stringify(data));
-  
+
 
 }
 
@@ -463,4 +461,61 @@ delteTodo(); //Call delteTodo function to delete
 markTodo(); //Call markTodo function to mark todo
 
 
+```
+
+### Project -7
+
+```javascript
+const randomColors = function () {
+  const hexValue = "0123456789ABCDEF";
+  let color = "#";
+
+  for (let i = 0; i < 6; i++) {
+    color += hexValue[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+let intervalId;
+const startChangingColor = function () {
+  if (!intervalId) {
+    intervalId = setInterval(changeBgColor, 1000);
+  }
+
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColors();
+  }
+};
+const stopChangingColor = function () {
+  clearInterval(intervalId);
+  intervalId = null;
+};
+
+document.getElementById("start").addEventListener("click", startChangingColor);
+document.getElementById("stop").addEventListener("click", stopChangingColor);
+```
+
+### Project -8
+
+```javascript
+const insert = document.getElementById("insert");
+
+window.addEventListener("keydown", (e) => {
+  insert.innerHTML = `
+  <div class = "color">
+
+  <table>
+  <tr>
+    <th>Key</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === " " ? "Space" : e.key}</td>
+    <td>${e.code}</td>
+  </tr>
+
+</table>
+  </div>
+  `;
+});
 ```

@@ -10,13 +10,13 @@
     <button id="cancel">Stop</button>
 
     <script>
-      const changeText = () => {
-        document.querySelector("h1").innerText = "Browser APIs";
-      };
-      const changeSetTOut = setTimeout(changeText, 2000);
+      function changeText() {
+        document.querySelector("h1").innerHTML = "Browser APIs";
+      }
+      const changeSetOut = setTimeout(changeText, 1500);
 
       document.querySelector("#cancel").addEventListener("click", () => {
-        clearTimeout(changeSetTOut);
+        clearTimeout(changeSetOut);
         console.log("STOPPED");
       });
     </script>
