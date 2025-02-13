@@ -7,20 +7,23 @@
   </head>
   <body>
     <h1>Web APIs</h1>
-    <button style="cursor: pointer" id="stop">Stop</button>
     <button style="cursor: pointer" id="start">Start</button>
+    <button style="cursor: pointer" id="stop">Stop</button>
 
     <script>
       let intervalId;
 
-      document.querySelector("#stop").addEventListener("click", () => {
-        clearInterval(intervalId);
-        console.log("Stop");
+      document.querySelector("#start").addEventListener("click", () => {
+        if (!intervalId) {
+          intervalId = setInterval(showDate, 3000);
+          console.log("Start");
+        }
       });
 
-      document.querySelector("#start").addEventListener("click", () => {
-        intervalId = setInterval(showDate, 3000);
-        console.log("Start");
+      document.querySelector("#stop").addEventListener("click", () => {
+        clearInterval(intervalId);
+        intervalId = null;
+        console.log("Stop");
       });
 
       const showDate = function () {

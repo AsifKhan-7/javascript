@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>XMLHttpRequest</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Value</th>
+        <th>State</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>UNSENT</td>
+        <td>Client has been created. <code>open()</code> not called yet.</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>OPENED</td>
+        <td><code>open()</code> has been called.</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>HEADERS_RECEIVED</td>
+        <td>
+          <code>send()</code> has been called, and headers and status are
+          available.
+        </td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>LOADING</td>
+        <td>Downloading; <code>responseText</code> holds partial data.</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td>DONE</td>
+        <td>The operation is complete.</td>
+      </tr>
+    </table>
+
+    <script>
+      // function networkRequest() {
+      //   // ✅ Step 1: XMLHttpRequest Object Create Karo
+      //   const xhr = new XMLHttpRequest();
+
+      //   // ✅ Step 2: Request Ko Setup Karo
+      //   xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/1", true);
+
+      //   // ✅ Step 3: Custom Headers Set Karo
+      //   xhr.setRequestHeader("Content-Type", "application/json");
+
+      //   // ✅ Step 4: Event Listeners Add Karo
+
+      //   // 1️⃣ onreadystatechange (Legacy Code Me Bohot Important)
+      //   xhr.onreadystatechange = function () {
+      //     console.log("Ready State Changed:", xhr.readyState); // ✅ readyState Property Ka Use
+      //     if (xhr.readyState === 4) {
+      //       // ✅ 4 Means DONE
+      //       if (xhr.status === 200) {
+      //         // ✅ status Property Ka Use
+      //         console.log("Success:", xhr.responseText); // ✅ responseText Property Ka Use
+      //       } else {
+      //         console.log("Error:", xhr.status);
+      //       }
+      //     }
+      //   };
+
+      //   // 2️⃣ onload (Modern Code Me Zyada Use Hota Hai)
+      //   xhr.onload = function () {
+      //     if (xhr.status === 200) {
+      //       console.log("Response (onload):", xhr.responseText);
+      //     }
+      //   };
+
+      //   // 3️⃣ onerror (Agar Request Fail Ho Jaye)
+      //   xhr.onerror = function () {
+      //     console.log("Network Error!");
+      //   };
+
+      //   // ✅ Step 5: Request Send Karo
+      //   xhr.send();
+
+      //   // ✅ Step 6: Agar 2 Second Me Response Na Aaye To Request Abort Karo
+      //   setTimeout(() => {
+      //     console.log("Aborting Request...");
+      //     xhr.abort(); // ✅ abort() Method Ka Use
+      //   }, 2000);
+      // }
+
+      const xhr = new XMLHttpRequest();
+      const requestUrl = "https://api.github.com/users/AsifKhan-7";
+      xhr.open("GET", requestUrl);
+
+      xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+
+        if (xhr.readyState === 4) {
+          const data = JSON.parse(this.responseText);
+
+          console.log(data);
+          console.log(typeof data);
+          console.log(data.avatar_url);
+        }
+      };
+
+      xhr.send();
+    </script>
+  </body>
+</html>

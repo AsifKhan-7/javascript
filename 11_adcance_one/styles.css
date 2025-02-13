@@ -1,0 +1,119 @@
+body {
+  background-color: #2c2c2c; /* Minimal dark background */
+  color: #e0e0e0; /* Light text color for readability */
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #383838; /* Slightly lighter dark shade for the table */
+  color: #fff; /* White text for contrast */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid #555; /* Subtle border */
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background-color: #444; /* Darker header */
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #3a3a3a; /* Alternating row colors */
+}
+
+tr:hover {
+  background-color: #505050; /* Row highlight on hover */
+}
+
+code {
+  background-color: #222;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+}
+
+/* Card */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 2px 4px,
+    rgba(9, 30, 66, 0.13) 0px 2px 2px;
+  max-width: 960px;
+  margin: 5px 15px;
+  margin-top: 1.5rem;
+}
+
+.card img {
+  min-width: 200px;
+  height: 250px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.card-content {
+  flex: 1;
+  /* margin-top; */
+}
+
+.card-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.extra-text {
+  display: none;
+}
+
+.read-more-btn {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 8px 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+}
