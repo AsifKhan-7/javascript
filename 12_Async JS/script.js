@@ -44,15 +44,34 @@
 
 // console.log("It's built-in with JS runtime enviornment");
 
-// function changeColor(color, delay, nextColorChange) {
-//   setTimeout(() => {
-//     document.querySelector("h1").style.color = color;
+function changeColor(color, delay) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      let randomNum = Math.floor(Math.random() * 5) + 1;
 
-//     if (nextColorChange) {
-//       nextColorChange();
-//     }
-//   }, delay);
-// }
+      console.log(`Random number is: ${randomNum}`);
+      if (randomNum > 2) {
+        document.querySelector("h1").style.color = color;
+        resolve("Color has been changed");
+      } else {
+        reject("Caught an error");
+      }
+    }, delay);
+  });
+}
+
+async function demo() {
+  try {
+    await changeColor("red", 1000);
+    await changeColor("green", 1000);
+    await changeColor("blue", 1000);
+    await changeColor("purple", 1000);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// demo();
 
 // changeColor("#00ff00", 1000, () => {
 //   changeColor("#0000ff", 1000, () => {
@@ -104,34 +123,34 @@
 //   }
 // );
 
-function saveToDb(data) {
-  return new Promise((resolve, reject) => {
-    let internetSpeed = Math.floor(Math.random() * 10) + 1;
-    console.log(internetSpeed);
+// function saveToDb(data) {
+//   return new Promise((resolve, reject) => {
+//     let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//     console.log(internetSpeed);
 
-    if (internetSpeed > 4) {
-      resolve("Success: Data was saved");
-    } else {
-      reject("Failure: Weack connetion, data was not saved");
-    }
-  });
-}
+//     if (internetSpeed > 4) {
+//       resolve("Success: Data was saved");
+//     } else {
+//       reject("Failure: Weack connetion, data was not saved");
+//     }
+//   });
+// }
 
-saveToDb("JavaScript")
-  .then((result) => {
-    console.log("Data1 saved");
-    console.log("result of promise", result);
-    return saveToDb("Hello World!");
-  })
-  .then((result) => {
-    console.log("Data2 saved", result);
-    console.log("result of promise", result);
-    return saveToDb("JS developer");
-  })
-  .then((result) => {
-    console.log("Data3 saved", result);
-    console.log("result of promise", result);
-  })
-  .catch((error) => {
-    console.log("Promise rejected", error);
-  });
+// saveToDb("JavaScript")
+//   .then((result) => {
+//     console.log("Data1 saved");
+//     console.log("result of promise", result);
+//     return saveToDb("Hello World!");
+//   })
+//   .then((result) => {
+//     console.log("Data2 saved", result);
+//     console.log("result of promise", result);
+//     return saveToDb("JS developer");
+//   })
+//   .then((result) => {
+//     console.log("Data3 saved", result);
+//     console.log("result of promise", result);
+//   })
+//   .catch((error) => {
+//     console.log("Promise rejected", error);
+//   });

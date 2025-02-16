@@ -78,14 +78,25 @@ async function consumePromiseFive() {
 }
 consumePromiseFive();
 
-async function getAllUsers() {
-  try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.log(error);
-  }
-}
+// async function getAllUsers() {
+//   try {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-getAllUsers();
+// getAllUsers();
+
+fetch("https://api.github.com/users/AsifKhan-7")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
