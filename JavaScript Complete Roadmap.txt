@@ -1,0 +1,215 @@
+***** PHASE 1:
+
+1. BASIC SYNTAX & STRUCTURE
+    * Comments
+    * Variables (var, let, and const)
+    * DataTypes (String, Number, Boolean, Null, Undefined, Object, Array)
+
+2. OPERATOR
+    * Arithmetic
+    * Comparision
+    * Logical
+    * Assignment
+
+3. Control Structure
+    * If Else
+    * Switch
+
+4. LOOPS
+    * for
+    * while
+    * do-while
+    * for-in
+    * for-of
+
+5. FUNCTIONS
+    * Function Declaration
+    * Function Expression
+    * Fat Arrow Function
+    * Anonymous Function
+    * IIFE (Immediately Invoked Function Expression)
+    * Four Ways to write function
+    * Default Parameters
+    * Return Statement
+    * Parameters & Arguments
+
+6. ARRAY 
+    * Creating & Accessing Arrays
+    * Utility Functions:
+        Array.isArray()
+        Array.to()
+        Array.from()
+        ....
+    * Array Methods:
+        push
+        pop
+        shift
+        unshift
+        slice
+        splice
+        join
+        forEach
+        map
+        filter
+        reduce
+        ...
+
+7. OBJECTS 
+    * Creating Objects 
+    * Accessing properties and Methods
+    * Nested Objects
+    * Utility Functions:
+        Object.keys()
+        Object.values()
+        Object.entries()
+        Object.assign()
+        Object.freeze()
+        Object.seal()
+    
+9. Basic DOM Manipulation
+
+8. Basic Error Handling
+    * try, catch, finally
+    * custom errors
+
+Now You are ready to build mini projects and can go for react, next, etc.
+
+***** PHASE 2:
+***********************************************************
+
+Math Object
+    * Math.round()
+    * Math.floor()
+    * Math.ceil()
+    * Math.random()
+    * Math.max()
+    * Math.min()
+    * Math.pow()
+    * Math.sqrt()
+    * Math.abs()
+    ....
+
+Date Object
+    * new Date()
+    * Date.now()
+    * getFullYear()
+    * getMonth()
+    * getDate()
+    * getDay()
+    * setFullYear()
+    * setHours()
+    ....
+
+Date formatting & time difference logic
+
+JSON
+    * JSON.stringify() – Convert object to JSON string
+    * JSON.parse() – Convert JSON string to object
+
+Global Functions
+    * parseInt()
+    * parseFloat()
+    * isNaN()
+    * isFinite()
+    * encodeURIComponent()
+    * decodeURIComponent()
+    ....
+
+***** PHASE 3:
+***********************************************************
+
+BASIC UNDERSTANDING:
+    * let vs const vs var
+    * pass by value v/s pass by reference
+    * truthy vs falsy
+    * Different types of export import
+
+MODERN JAVASCRIPT
+    * ECMA Script
+    * Symbols
+    * BigInt
+    * Sets
+    * Maps
+    * Interators & Generators
+    * Proxy & Reflect
+    * Other ES6+ Features (Spread, Rest, Destructuring, Nullish colescing, Optional Chaining, Modules etc)
+    * WeakMap & WeakSet – less used but important for memory management.
+    * Dynamic Imports – Useful for code-splitting in modern apps.
+    * Top-level await – Helpful in ES modules.
+
+ADVANCE JS
+    * function hoisting
+    * Closures
+    * type equality & coercion
+    * short circuit evaluation
+    * Callback functions 
+    * Constructor functions
+    * Objects & Prototypes
+    * Classes & inheritance
+    * Functional Programming
+    * Object Oriented Programming
+    * Autoboxing & Primitive Wrapper Objects
+
+***** PHASE 4:
+************************************************************
+
+WEBSITE DEVELOPMENT KE LIYE:
+    * Nodejs vs browser
+    * Global Object
+    * DOM manupulation
+    * Event propagation & Handling
+    * Form Handling
+    * local storage, session storage, and index DB
+    * Service Workers
+    * Web Workers
+    * Web Sockets
+    * WebGL API, Canvas API, & more web APIs
+    * Accessibility (a11y) Basics
+
+ASYNCHRONOUS PROGRAMMING
+
+    * Synchronous vs asynchronous
+    * Javascript Engine & Javascript Environment
+    * Timers
+    * Call Stack
+    * Event Loop 
+    * Task queue & Microtask queue
+    * Callback Hell
+    * Promises
+    * Async / Await
+    * AbortController – For canceling fetch requests and other async tasks.
+    * Concurrency vs Parallelism – Especially important when discussing workers or performance.
+
+***** PHASE 5:
+*************************************************************
+
+INTERVIEW KE LIYE GHARAYION ME JANA HAI:
+    * Execution Context
+    * this keyword & call, apply, bind
+    * Static v/s Dynamic Typing
+    * Overview of typescript: adding type safety to Javascript
+    * JIT Compilation
+    * Integrating Javascript with other languages (WASM)
+    * Memory Management
+    * Event propagation, bubbling, tickling, Event Delegation
+    * Memory Leaks & Garbage Collection
+    * Event Loop Phases (Macrotasks vs Microtasks in detail)
+    * Deep vs Shallow Copy
+
+PROFESSIONAL JAVASCRIPT
+
+    * Javascript design pattern
+    * Advance debugging techniques and tools
+    * Best Practices & Code Quality
+    * Unit Testing
+    * Deploying Javascript Applications
+    * Include a Git & GitHub section for version control.
+
+***** PHASE 6:
+*************************************************************
+
+3-4 Bhayankar projects
+    * Portfolio Website
+    * To-do App with localStorage or IndexedDB
+    * real-time Chat App (WebSockets + Service Workers)
+    * E-commerce Mini App (cart, auth, payment simulation)
